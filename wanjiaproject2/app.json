@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/express/express",
+    "pages/startpage/startpage",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#AA0000",
+    "navigationBarTitleText": "云创动力查快递",
+    "navigationBarTextStyle": "white"
+  }
+}

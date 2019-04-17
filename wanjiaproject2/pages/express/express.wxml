@@ -1,0 +1,39 @@
+<!-- logo开始 -->
+<view class='logoimg_view'>
+     <image src="../images/logo.jpg" class="logoimg"></image>
+</view>
+<!-- logo结束 -->
+<!-- logo文字开始 -->
+<view class='logotitle'>
+   <text>查快递，上云创</text>
+</view>
+<!-- logo文字结束 -->
+<!-- 搜索框开始 -->
+<form bindsubmit='getExpressInfo'>
+<view class='search_view'>
+    <input type='number' name="ecode" class="inputnum" maxlength='18' value='{{numCode}}' placeholder='请输入快递单号'></input>
+    <view class='scan_view'>
+      <image src="../images/scan.png" class="scanimg" bindtap='getnum'></image>
+    </view>
+    <button form-type='submit' class='btn'>查询</button>
+</view>
+</form>
+<!-- 搜索框结束 -->
+<!-- 快递公司开始 -->
+<view class='expressenterpriseview'>
+   <picker range='{{list}}' class='select' bindchange='getEnterPrise'>
+   {{ArrayObject[index].name}}
+   </picker>
+</view>
+<!-- 快递公司结束 -->
+
+<!-- 快递轨迹信息开始 -->
+<view class='infolist' wx:for="{{ary}}" wx:key="this">
+   {{item.AcceptStation}}{{item.AcceptTime}}
+</view>
+<!-- 快递轨迹信息结束 -->
+
+<view style='height:50rpx;'></view>
+<view class='footer'>
+   新兵出品，必是精品 http://www.itlaobing.com
+</view>
